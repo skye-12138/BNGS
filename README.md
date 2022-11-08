@@ -64,7 +64,7 @@ The [regress_ID] could be lab name or sample ID, and if there are many sample or
 
 
 ## Caution 
-This version used a lot of loop to process the data, it does't use any paralelle processing management，if the server has high memory and multiple CPUs it could be inefficient. In most cases, we dealing with 1-2 projects in different server, each projects contain 1-2 lane data from Novaseq 6000. Using these scripts is enough to get the results in time. If you need a more efficient verion [cumulus](https://github.com/klarman-cell-observatory/cumulus) could help.
+This version used a lot of loop to process the data, it does't use any paralelle processing management，if the server has high memory and multiple CPUs it could be inefficient. In most cases, we dealing with 1-2 projects in different server, each projects contain 1-2 lane data from Novaseq 6000. Using these scripts is enough to get the results in time. If you need a more efficient version [cumulus](https://github.com/klarman-cell-observatory/cumulus) could help.
 
 
 
