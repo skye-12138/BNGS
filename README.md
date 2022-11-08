@@ -1,5 +1,5 @@
 # BNGS (Big NGS)
-This is a repository containing scripts used for dealing with Big NGS data. In these scripts, I used some string manipulation strategies along with shell pipe to pre-processing multiple data in one line. By using these scripts and following the standerd rules, it is easy to get different analysis output of different data types.
+This is a repository containing scripts used for dealing with Big NGS data. In these scripts, I used some string manipulation strategies along with shell pipe to pre-processing multiple data in one line. By using these scripts and following the standerd rules, it is easy to get different analysis output of different data types. And to benefit for platforms, I also write a script to sent data to ftp server directory according to different laboratory names.
 
 ## The scripts now support the following sequencing data analysis 
 - single cell RNAseq (including transcriptome, BCR, TCR, totalseq)
@@ -30,7 +30,8 @@ Other part following rules of 10X
 
 ### pre-processing server (/data1, in this case)
 
-<img width="907" alt="image" src="https://user-images.githubusercontent.com/49186667/200536989-20f1bac0-d845-4569-ba62-3b7d8c792287.png">
+<img width="1186" alt="image" src="https://user-images.githubusercontent.com/49186667/200621085-350cbd93-c11b-437b-9983-01bb5da58010.png">
+
 
 **date_company_fq** represents the [prj_ID] below, we use sequencing date, and company abbrivation with _fq as unique [prj_ID]
 
@@ -74,6 +75,11 @@ Sample sheet for bcl demuxing, following the standard sample sheet format in [bc
 
 All the tag information can be found in 10X and biolengend (find sequence)
 
+- ST_HE directory
+ Containing HE images, name as [sampleID].jpeg or other suffix supported by spaceranger. 
+ In spaceranger V1.3, the images should be adjusted to the right position by manually rotate the images, let the triangle corner in the left bottom and one side parallel to bottom side of the image.
+ 
+ 
 ### for deliver 
 - experiment recording table \
 A table containing all experiment information
