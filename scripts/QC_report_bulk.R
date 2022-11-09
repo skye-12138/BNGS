@@ -1,5 +1,5 @@
 #!/usr/bin/Rscript
-#.libPaths(c("/home/JiangMH/doc/Rlibrary4.0", .libPaths()))
+
 args <- commandArgs(trailingOnly = TRUE)
 dir_out=args[1]
 name_out=args[2]
