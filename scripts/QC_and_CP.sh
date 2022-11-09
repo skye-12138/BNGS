@@ -44,7 +44,8 @@ do
 			results=$(echo ${selected_PI} | grep ${PI} )
 			if [[ $results != "" ]];then
 				if [ ! -e ${ftp}${PI}_${timeid}/${sampleidd}/QC/${PI}_${timeid}_${sampleidd}.csv ];then
-					cat $meta | head -n 1 | cut -d "," -f 1-3,9-25 >${ftp}${PI}_${timeid}/${sampleidd}/QC/${PI}_${timeid}_${sampleidd}.csv  
+					## in this step, we delete some specific columns, not showing to labs
+					cat $meta | head -n 1 | cut -d "," -f 1-3,9-18,20-25 >${ftp}${PI}_${timeid}/${sampleidd}/QC/${PI}_${timeid}_${sampleidd}.csv  
 				fi
 				for samplefullpath in $(ls -d ${i}/*${sampleidd}*)
 				do
